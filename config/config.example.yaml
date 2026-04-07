@@ -1,30 +1,46 @@
-# Example configuration for Peter
-# Copy this file to config.yaml and update with your settings
-
-# Database connection
+# Database connection settings
 database:
   server: "localhost"
-  database: "your_database_name"
-  username: "your_username"
-  password: "${DB_PASSWORD}"  # Set in .env file
+  database: "your_database"
+  username: "db_user"
+  password: "${DB_PASSWORD}"
   driver: "ODBC Driver 17 for SQL Server"
 
-# Jira integration
+# Jira integration settings
 jira:
   url: "https://your-company.atlassian.net"
-  username: "your-email@example.com"
-  api_token: "${JIRA_API_TOKEN}"  # Set in .env file
-  project_key: "YOUR_PROJECT"
+  username: "jira_user@company.com"
+  api_token: "${JIRA_API_TOKEN}"
+  project_key: "SCHEMA"
   issue_type: "Task"
 
-# Paths
+# Paths configuration
 paths:
   log_model_excel: "data/log_model.xlsx"
   output_reports: "output/reports"
   output_scripts: "output/scripts"
 
-# Scheduler (optional)
+# Scheduler settings
 schedule:
-  enabled: false
-  cron: "0 2 * * *"  # Daily at 2 AM
+  enabled: true
+  cron: "0 2 * * *"
   timezone: "UTC"
+
+# Severity mapping rules
+severity_rules:
+  missing_in_db:
+    table: "CRITICAL"
+    column: "HIGH"
+  missing_in_model:
+    table: "HIGH"
+    column: "MEDIUM"
+  attr_diff:
+    data_type: "HIGH"
+    nullable: "MEDIUM"
+    length: "LOW"
+  pk_diff: "CRITICAL"
+
+# Owner mapping settings
+owner_mapping:
+  default_owner: "schema_team"
+  fallback_jira_user: "unassigned"
