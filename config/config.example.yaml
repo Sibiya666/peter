@@ -1,0 +1,30 @@
+# Example configuration for Peter
+# Copy this file to config.yaml and update with your settings
+
+# Database connection
+database:
+  server: "localhost"
+  database: "your_database_name"
+  username: "your_username"
+  password: "${DB_PASSWORD}"  # Set in .env file
+  driver: "ODBC Driver 17 for SQL Server"
+
+# Jira integration
+jira:
+  url: "https://your-company.atlassian.net"
+  username: "your-email@example.com"
+  api_token: "${JIRA_API_TOKEN}"  # Set in .env file
+  project_key: "YOUR_PROJECT"
+  issue_type: "Task"
+
+# Paths
+paths:
+  log_model_excel: "data/log_model.xlsx"
+  output_reports: "output/reports"
+  output_scripts: "output/scripts"
+
+# Scheduler (optional)
+schedule:
+  enabled: false
+  cron: "0 2 * * *"  # Daily at 2 AM
+  timezone: "UTC"
