@@ -10,6 +10,14 @@ from .data_models import (
     OwnerMapping
 )
 
+from .config import (
+    DatabaseConfig,
+    JiraConfig,
+    PathsConfig,
+    ScheduleConfig,
+    AppConfig
+)
+
 __all__ = [
     "CheckType",
     "Severity",
@@ -19,5 +27,10 @@ __all__ = [
     "DatabaseTable",
     "CheckResult",
     "RunReport",
-    "OwnerMapping"
+    "OwnerMapping",
+    "DatabaseConfig",
+    "JiraConfig",
+    "PathsConfig",
+    "ScheduleConfig",
+    "AppConfig"
 ]
