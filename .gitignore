@@ -45,6 +45,9 @@ logs/*.log
 output/reports/*.xlsx
 output/scripts/*.sql
 
+# Worktrees
+.worktrees/
+
 # OS
 .DS_Store
 Thumbs.db
