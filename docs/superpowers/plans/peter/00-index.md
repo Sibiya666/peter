@@ -30,7 +30,7 @@ This plan implements a comprehensive database schema compliance monitoring syste
 - [Task 5: Log Model Parser (Excel)](./task-05-log-model-parser.md) ✅
 
 ### Phase 2: Database Layer (Tasks 6-8)
-- [Task 6: Database Connection Manager](./task-06-db-connection.md)
+- [Task 6: Database Connection Manager](./task-06-db-connection.md) ✅
 - [Task 7: Schema Reader (INFORMATION_SCHEMA)](./task-07-schema-reader.md)
 - [Task 8: Audit Logger](./task-08-audit-logger.md)
 
@@ -87,12 +87,12 @@ Task 1 (Setup)
 
 ## Progress Tracking
 
-**Completed:** 5/22 (22.7%)
-**In Progress:** None (ready for Task 6)
-**Remaining:** 17
+**Completed:** 6/22 (27.3%)
+**In Progress:** None (ready for Task 7)
+**Remaining:** 16
 
-**Last completed:** Task 5 - Log Model Parser (Excel) (2026-04-07)
-**Next task:** Task 6 - Database Connection Manager
+**Last completed:** Task 6 - Database Connection Manager (2026-04-07)
+**Next task:** Task 7 - Schema Reader (INFORMATION_SCHEMA)
 
 🎉 **Phase 1: Foundation - COMPLETED!**
 
